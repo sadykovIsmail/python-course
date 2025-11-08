@@ -42,7 +42,7 @@ def find_invalid_records(
 ):
 
     constraints = {
-        'patient_id': isinstance(patient_id, str) and re.search('p', patient_id, re.IGNORECASE)
+        'patient_id': isinstance(patient_id, str) and re.fullmatch('p\d+', patient_id, re.IGNORECASE)
     }
 
     return constraints
