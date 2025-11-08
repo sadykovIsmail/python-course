@@ -52,8 +52,6 @@ def find_invalid_records(
 
     }
 
-    return constraints
-
 def validate(data):
     is_sequence = isinstance(data, (list, tuple))
 
