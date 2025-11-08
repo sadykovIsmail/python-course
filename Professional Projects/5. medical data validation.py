@@ -72,3 +72,4 @@ def validate(data):
 
 
 validate(medical_records)
+print(find_invalid_records(**medical_records[0]))
