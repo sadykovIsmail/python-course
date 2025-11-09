@@ -4,7 +4,7 @@ class MusicalInstrument:
         self.instrument_type = instrument_type
         
     def play(self):
-        pass
+        print(f"The {self.name} is fun to play!")
 
 instrument_1 = MusicalInstrument("Oboe", "woodwind")
 instrument_2 = MusicalInstrument("Trumpet", "brass")
