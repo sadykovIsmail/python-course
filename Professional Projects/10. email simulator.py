@@ -9,6 +9,13 @@ class Email:
     def mark_as_read(self):
         self.read = True
 
+    def display_full_email(self):
+        self.mark_as_read()
+        print('\n--- Email ---')
+        print(f"From: {self.sender}")
+        print(f"To: {self.receiver}")
+
+
 class User:
     def __init__(self, name):
         self.name = name
@@ -24,4 +31,3 @@ class Inbox:
     
     def receive_email(self, email):
         self.emails.append(email)
-
