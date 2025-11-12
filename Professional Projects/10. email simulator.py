@@ -91,5 +91,11 @@ def main():
     # Ramy sends reply to Tory
     ramy.send_email(tory, 'Re: Hello', 'Hi Tory, hope you are fine.')
 
+    # Step 51: demonstrate inbox functionality
+    ramy.check_inbox()        # 1. check inbox
+    ramy.read_email(1)        # 2. read the first email
+    ramy.delete_email(1)      # 3. delete the first email
+    ramy.check_inbox()        # 4. check inbox again to see the changes
+
 if __name__ == '__main__':
     main()
