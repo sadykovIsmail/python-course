@@ -12,21 +12,20 @@ class Email:
     def mark_as_read(self):
         self.read = True
 
-
     def display_full_email(self):
         self.mark_as_read()
         print('\n--- Email ---')
         print(f'From: {self.sender.name}')
         print(f'To: {self.receiver.name}')
         print(f'Subject: {self.subject}')
-        
+        print(f"Received: {self.timestamp.strftime('%Y-%m-%d %H:%M')}")
         print(f'Body: {self.body}')
         print('------------\n')
-        print(f"Received: {self.timestamp.strftime('%Y-%m-%d %H:%M')}")
 
     def __str__(self):
         status = 'Read' if self.read else 'Unread'
-        return f"[{status}] From: {self.sender.name} | Subject: {self.subject}"
+        return f"[{status}] From: {self.sender.name} | Subject: {self.subject} | Time: {self.timestamp.strftime('%Y-%m-%d %H:%M')}"
+
 class User:
     def __init__(self, name):
         self.name = name
