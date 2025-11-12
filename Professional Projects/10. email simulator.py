@@ -40,7 +40,6 @@ class Inbox:
         for i, email in enumerate(self.emails, start=1):
             print(f'{i}. {email}')
 
-
     def read_email(self, index):
         if not self.emails:
             print('Inbox is empty.\n')
@@ -61,7 +60,7 @@ class Inbox:
             return
         del self.emails[actual_index]
         print('Email deleted.\n')
-
+        
 class User:
     def __init__(self, name):
         self.name = name
@@ -82,6 +81,9 @@ class User:
     def delete_email(self, index):
         self.inbox.delete_email(index)
 
-def main(self):
-    tory = User("Tory")
-    ramy = User("Ramy")
+def main():
+    tory = User('Tory')
+    ramy = User('Ramy')        
+
+if __name__ == '__main__':
+    main()
