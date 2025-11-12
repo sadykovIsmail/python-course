@@ -55,4 +55,9 @@ class Inbox:
             return
         
         self.emails[actual_index].display_full_email()
+        
+    def delete_email(self, index):
+        if not self.emails:
+            print('Inbox is empty.\n')
+            return
 
