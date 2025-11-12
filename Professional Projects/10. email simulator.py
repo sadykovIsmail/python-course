@@ -40,6 +40,7 @@ class Inbox:
         for i, email in enumerate(self.emails, start=1):
             print(f'{i}. {email}')
 
+
     def read_email(self, index):
         if not self.emails:
             print('Inbox is empty.\n')
@@ -60,7 +61,7 @@ class Inbox:
             return
         del self.emails[actual_index]
         print('Email deleted.\n')
-        
+
 class User:
     def __init__(self, name):
         self.name = name
@@ -69,7 +70,6 @@ class User:
     def send_email(self, receiver, subject, body):
         email = Email(sender=self, receiver=receiver, subject=subject, body=body)
         receiver.inbox.receive_email(email)
-        print(f'Email sent from {self.name} to {receiver.name}!\n')
 
     def check_inbox(self):
         print(f"\n{self.name}'s Inbox:")
@@ -83,7 +83,13 @@ class User:
 
 def main():
     tory = User('Tory')
-    ramy = User('Ramy')        
+    ramy = User('Ramy')
+
+    # Tory sends email to Ramy
+    tory.send_email(ramy, 'Hello', 'Hi Ramy, just saying hello!')
+
+    # Ramy sends reply to Tory
+    ramy.send_email(tory, 'Re: Hello', 'Hi Tory, hope you are fine.')
 
 if __name__ == '__main__':
     main()
