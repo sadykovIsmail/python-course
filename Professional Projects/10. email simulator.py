@@ -51,6 +51,8 @@ class Inbox:
             return
         actual_index = index - 1
         if actual_index < 0 or actual_index >= len(self.emails):
-            print("Invalid email number.\n")
+            print('Invalid email number.\n')
             return
+        
+        self.emails[actual_index].display_full_email()
 
