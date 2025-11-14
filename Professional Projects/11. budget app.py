@@ -23,7 +23,10 @@ class Category:
 
     # Otherwise add a withdrawal entry (negative amount)
         self.ledger.append({"amount": -amount, "description": description})
+        balance = sum(item["amount"] for item in self.ledger)
+
         return True
+        
 
         
         
@@ -35,7 +38,7 @@ def create_spend_chart(categories):
 hello = Category(0)
 hello.deposit(35)
 hello.withdraw(3)
-print(hello.ledger)
+
 # hello.withdraw(30)
 
 
