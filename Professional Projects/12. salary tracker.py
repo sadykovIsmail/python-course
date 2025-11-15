@@ -44,14 +44,17 @@ class Employee:
             raise ValueError(f"'{self.level}' is already the selected level.")
         if Employee._base_salaries[new_level] < Employee._base_salaries[self.level]:
             raise ValueError(f"Cannot change to lower level.")
-        
+        print(f"'{self.name}' promoted to '{new_level}'.")
         self._salary = Employee._base_salaries[new_level]
         self._level = new_level
-        print(f"'{self._name}' promoted to '{new_level}'.")
     @property
     def salary(self):
         return self._salary
 
+    
+
 charlie_brown = Employee('Charlie Brown', 'trainee')
 print(charlie_brown)
 print(f'Base salary: ${charlie_brown.salary}')
+
+charlie_brown.level = 'junior'
