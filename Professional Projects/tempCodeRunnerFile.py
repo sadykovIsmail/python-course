@@ -9,7 +9,7 @@ class Employee:
         if not (isinstance(name, str) and isinstance(level, str)):
             raise TypeError("'name' and 'level' attribute must be of type 'str'.")
         if level not in Employee._base_salaries:
-            raise ValueError(f"Invalid value '{level}' for 'level' attribute.")
+            raise ValueError(f" Invalid value '{level}' for 'level' attribute.")
         self._name = name
         self._level = level
 
