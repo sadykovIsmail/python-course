@@ -47,14 +47,16 @@ class Employee:
         print(f"'{self.name}' promoted to '{new_level}'.")
         self._salary = Employee._base_salaries[new_level]
         self._level = new_level
+
     @property
     def salary(self):
         return self._salary
-
     @salary.setter
-    def salary(self, new):
-        self._salary = new
-        print(f"Salary updated to ${new}")
+    def salary(self, new_salary):
+        if not (isinstance(new_salary, int) or isinstance(new_salary, float)):
+            raise TypeError("'salary' must be a number.")
+        self._salary = new_salary
+        print(f'Salary updated to ${self.salary}.')
 
 charlie_brown = Employee('Charlie Brown', 'trainee')
 print(charlie_brown)
