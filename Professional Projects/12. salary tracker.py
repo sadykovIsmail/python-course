@@ -51,7 +51,10 @@ class Employee:
     def salary(self):
         return self._salary
 
-    
+    @salary.setter
+    def salary(self, new):
+        self._salary = new
+        print(f"Salary updated to ${new}")
 
 charlie_brown = Employee('Charlie Brown', 'trainee')
 print(charlie_brown)
