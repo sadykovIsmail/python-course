@@ -25,6 +25,13 @@ class Employee:
     def name(self):
         return self._name
 
+    @name.setter
+    def name(self, new_name):
+        if not isinstance(new_name, str):
+            raise TypeError("'name' must be a string.")
+        self._name = new_name
+        print(f"'name' updated to '{self.name}'.")
+
     @property
     def level(self):
         return self._level
@@ -32,6 +39,7 @@ class Employee:
     @property
     def salary(self):
         return self._salary
+
 charlie_brown = Employee('Charlie Brown', 'trainee')
 print(charlie_brown)
-print(f"Base salary: ${charlie_brown.salary}")
+print(f'Base salary: ${charlie_brown.salary}')
