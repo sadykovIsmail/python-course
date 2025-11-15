@@ -1,10 +1,11 @@
 class Employee:
     _base_salaries = {
-    'trainee': 1000,
-    'junior': 2000,
-    'mid-level': 3000,
-    'senior': 4000
-}
+        'trainee': 1000,
+        'junior': 2000,
+        'mid-level': 3000,
+        'senior': 4000,
+    }
+
     def __init__(self, name, level):
         if not (isinstance(name, str) and isinstance(level, str)):
             raise TypeError("'name' and 'level' attribute must be of type 'str'.")
@@ -27,10 +28,10 @@ class Employee:
     @property
     def level(self):
         return self._level
-    
+
     @property
     def salary(self):
         return self._salary
-
 charlie_brown = Employee('Charlie Brown', 'trainee')
 print(charlie_brown)
+print(f"Base salary: ${charlie_brown.salary}")
