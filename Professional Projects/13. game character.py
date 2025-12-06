@@ -35,5 +35,6 @@ class GameCharacter:
             self._mana = 50 
         else:
             self._mana = new_mana
-            
-            
+    @property    
+    def level(self):
+        return self._level
