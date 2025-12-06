@@ -14,4 +14,14 @@ class GameCharacter:
     def health(self):
         return self._health
     
+    @health.setter
+    def health(self, new_health):
+        if new_health < 0:
+            self._health = 0
+        elif new_health > 100: 
+            self._health = 100
+        else:
+            
+            self._health = new_health
+            
     
