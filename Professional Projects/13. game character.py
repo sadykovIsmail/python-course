@@ -10,5 +10,8 @@ class GameCharacter:
     def name(self):
         return self._name
     
+    @property
     def health(self):
         return self._health
+    
+    
