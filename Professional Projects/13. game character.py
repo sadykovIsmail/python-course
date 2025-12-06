@@ -38,3 +38,18 @@ class GameCharacter:
     @property    
     def level(self):
         return self._level
+    
+    def level_up(self):
+        self._level += 1
+        self.health = 100
+        self.mana = 50
+        print(f"{self._name} leveled up to {self._level}!")
+        
+        
+    def __str__(self):
+        return (
+            f"Name: {self._name}\n"
+            f"Level: {self._level}\n"
+            f"Health: {self._health}\n"
+            f"Mana: {self._mana}"
+    )
