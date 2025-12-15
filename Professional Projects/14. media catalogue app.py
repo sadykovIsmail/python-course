@@ -9,6 +9,6 @@ class Movie:
         return f"{self.title} ({self.year}) - {self.duration} min, {self.director}"
     
     
-example = Movie('harry', 2023, 'me', 1)
+movie1 = Movie('harry', 2023, 'me', 1)
 
-print(example)
+print(movie1)
