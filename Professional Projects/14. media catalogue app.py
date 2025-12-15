@@ -51,6 +51,10 @@ class MediaCatalogue:
         if not isinstance(media_item, Movie):
             raise MediaError("Only Movie or TVSeries instances can be added", media_item)
         self.items.append(media_item)
+        
+    def get_movies(self):
+        return [mov for mov in self.items if type(mov) is Movie]
+        
     def __str__(self):
         if not self.items:
             return 'Media Catalogue (empty)'
@@ -77,3 +81,6 @@ try:
     print(catalogue)
 except ValueError as e:
     print(f'Validation Error: {e}')
+    
+except MediaError as e:
+    print(f"Media Error: {e}")
