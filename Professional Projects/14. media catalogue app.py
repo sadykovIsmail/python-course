@@ -33,9 +33,11 @@ class MediaCatalogue:
             result += f'{i}. {movie}\n'
         return result
 
+catalogue = MediaCatalogue()
 
 try:
     movie1 = Movie('The Matrix', 1999, 'The Wachowskis', 136)
-
+    catalogue.add(movie1)
+    print(catalogue)
 except ValueError as e:
     print(f'Validation Error: {e}')
