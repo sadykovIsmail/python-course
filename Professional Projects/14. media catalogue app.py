@@ -27,6 +27,9 @@ class TVSeries(Movie):
         
         self.seasons = seasons
         self.total_episodes = total_episodes
+        
+    def __str__(self):
+        return f"{self.title} ({self.year}) - {self.seasons} seasons, {self.total_episodes} episodes, {self.duration} min avg, {self.director}"
 
 
 class MediaCatalogue:
