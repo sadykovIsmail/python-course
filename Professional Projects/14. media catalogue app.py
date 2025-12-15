@@ -5,3 +5,10 @@ class Movie:
         self.director = director
         self.duration = duration
         
+    def __str__(self):
+        return f"{self.title} ({self.year}) - {self.duration} min, {self.director}"
+    
+    
+example = Movie('harry', 2023, 'me', 1)
+
+print(example)
