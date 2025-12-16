@@ -13,7 +13,7 @@ class Rectangle:
     #setter
     def set_height(self, value: int):
         self.height = value
-        return f"Width set to: {self.height}"
+        return f"Height set to: {self.height}"
         
     def get_area(self):
         return self.width * self.height
@@ -28,7 +28,7 @@ class Rectangle:
         if self.width > 50 or self.height > 50:
             return 'Too big for picture.'
         
-        
+        return ("*" * self.width + "\n") * self.height
 
 class Square(Rectangle):
     pass
@@ -38,6 +38,4 @@ rectangle = Rectangle()
 
 print(rectangle.set_width(3))
 print(rectangle.set_height(2))
-print(rectangle.get_area())
-print(rectangle.get_perimeter())
-print(rectangle.get_diagonal())
+print(rectangle.get_picture())
