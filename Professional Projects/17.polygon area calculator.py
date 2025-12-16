@@ -1,9 +1,9 @@
 import math
 class Rectangle:
-    def __init__(self):
+    def __init__(self, width, height):
         
-        self.width = 0
-        self.height = 0
+        self.width = width
+        self.height = height
     
     #setter
     def set_width(self, value: int):
@@ -41,15 +41,26 @@ class Rectangle:
     
 class Square(Rectangle):
     def __init__(self, side):
-        super().__init__()
+        super().__init__(side, side)
+        self.side = side
+    def set_width(self, value):
+        self.width = value
+        self.height = value
         
-        self.width = side
-        self.height = side
+    def set_height(self, value):
+        self.height = value
+        self.width = value
+        
+    def set_side(self, value):
+        self.height = value
+        self.width = value
     
+    def __str__(self):
+        return f"Square(side={self.side})"
     
     
 #testing
-rectangle = Rectangle()
+rectangle = Rectangle(3, 4)
 
 print(rectangle.set_width(4))
 print(rectangle.set_height(8))
