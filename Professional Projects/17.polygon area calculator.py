@@ -30,12 +30,21 @@ class Rectangle:
         
         return ("*" * self.width + "\n") * self.height
 
+    def get_amount_inside(self, width, height):
+        fit_width = self.width // width
+        fit_height = self.height // height
+        return fit_width * fit_height
+    
+    def __str__(self):
+        return f"Rectangle(width={self.width}, height={self.height})"
+    
+    
 class Square(Rectangle):
     pass
     
     
 rectangle = Rectangle()
 
-print(rectangle.set_width(3))
-print(rectangle.set_height(2))
-print(rectangle.get_picture())
+print(rectangle.set_width(4))
+print(rectangle.set_height(8))
+print(rectangle.get_amount_inside(4, 4))
