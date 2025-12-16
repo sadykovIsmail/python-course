@@ -18,6 +18,10 @@ class Rectangle:
     def get_area(self):
         area = self.width * self.height
         return area
+    
+    def get_perimeter(self):
+        perimeter = 2 * (self.width + self.height)
+        return perimeter
 class Square(Rectangle):
     pass
     
@@ -27,3 +31,4 @@ rectangle = Rectangle()
 print(rectangle.set_width(3))
 print(rectangle.set_height(2))
 print(rectangle.get_area())
+print(rectangle.get_perimeter())
