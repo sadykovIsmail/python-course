@@ -40,9 +40,15 @@ class Rectangle:
     
     
 class Square(Rectangle):
-    pass
+    def __init__(self, side):
+        super().__init__()
+        
+        self.width = side
+        self.height = side
     
     
+    
+#testing
 rectangle = Rectangle()
 
 print(rectangle.set_width(4))
