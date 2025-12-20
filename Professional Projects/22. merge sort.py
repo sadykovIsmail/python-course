@@ -14,3 +14,5 @@ def merge_sort(array):
     while left_array_index < len(left_part) and right_array_index < len(right_part):
         if left_part[left_array_index] < right_part[right_array_index]:
             array[sorted_index] = left_part[left_array_index]
+        else:
+            array[sorted_index] = right_part[right_array_index]
