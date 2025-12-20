@@ -1,0 +1,1 @@
+print(example.remove(3))
