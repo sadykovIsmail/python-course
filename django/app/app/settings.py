@@ -66,7 +66,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'polls.wsgi.application'
+WSGI_APPLICATION = 'app.wsgi.application'
 
 
 # Database
