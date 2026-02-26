@@ -25,17 +25,22 @@ class LinkedList:
     def remove(self, element):
         previous_node = None
         current_node = self.head
+
+        # Traverse until we find the element or exhaust the list
         while current_node is not None and current_node.element != element:
-            
-                previous_node = current_node
-                current_node = current_node.next
+            previous_node = current_node
+            current_node = current_node.next
+
         if current_node is None:
-            return
+            return  # Element not found — nothing to remove
+
         elif previous_node is not None:
+            # Mid-list or tail removal: skip over the current node
             previous_node.next = current_node.next
-            
-        else: 
+        else:
+            # Head removal: advance the head pointer to the next node
             self.head = current_node.next
+
         self.length -= 1
 my_list = LinkedList()
 print(my_list.is_empty())

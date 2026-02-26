@@ -1,6 +1,15 @@
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat&logo=python&logoColor=white)
+![Algorithms](https://img.shields.io/badge/Algorithms-12%2B%20Implemented-22c55e?style=flat)
+![Data Structures](https://img.shields.io/badge/Data%20Structures-Linked%20List%20%7C%20Hash%20Table%20%7C%20Graph-f59e0b?style=flat)
+![OOP](https://img.shields.io/badge/OOP-Classes%20%7C%20Inheritance%20%7C%20Patterns-8b5cf6?style=flat)
+![Backend Engineering](https://img.shields.io/badge/Backend%20Engineering-Django%20Ready-ef4444?style=flat)
+![License](https://img.shields.io/badge/License-MIT-6b7280?style=flat)
+
 # 🐍 Python Engineering Practice Repository
 
-A collection of Python projects and exercises built while actively transitioning into backend development. This repository documents a hands-on learning journey — from foundational syntax through object-oriented design, data structures, algorithms, and software engineering patterns — all written in clean, readable Python.
+A structured, hands-on Python learning portfolio built while actively transitioning into backend engineering. This repository progresses from core Python fundamentals through object-oriented design, custom data structures, algorithm implementation, and software engineering patterns — the exact skill stack required for professional backend development with Django and Django REST Framework.
+
+Every project here solves a real problem and is written with production habits in mind: input validation, encapsulation, single responsibility, and clean interfaces.
 
 ---
 
@@ -10,18 +19,130 @@ This repository was created to master Python as the primary language for backend
 
 ---
 
+## 🚀 Skills Demonstrated
+
+| Category | Topics Covered |
+|---|---|
+| **Core Python** | syntax, functions, closures, comprehensions, string manipulation |
+| **Data Structures** | linked lists, hash tables, graphs (adjacency matrix & list) |
+| **Algorithms** | binary search, merge sort, quick sort, selection sort, bisection method, Tower of Hanoi, Luhn checksum |
+| **Object-Oriented Programming** | classes, inheritance, encapsulation, polymorphism, dunder methods |
+| **Design Patterns** | Strategy pattern, Abstract Base Classes, object composition |
+| **Data Validation** | regex validation, checksum algorithms, type enforcement, constraint checking |
+| **Software Engineering** | modular design, defensive programming, single-responsibility functions, custom exceptions |
+
+---
+
+## 📁 Repository Structure
+
+```
+python-course/
+│
+├── README.md                              ← You are here
+│
+└── python/
+    ├── Learning Projects/                 ← Focused concept exercises
+    │   ├── classes and objects/           ← Dynamic attribute introspection
+    │   │   ├── all in one.py              ← Interactive CLI (setattr/getattr/hasattr/delattr)
+    │   │   ├── delete attribute.py
+    │   │   ├── din set attribute.py
+    │   │   ├── dinamically get attribute.py
+    │   │   └── has attribute.py
+    │   ├── decorator/
+    │   │   └── decorator.py               ← Custom function decorator from scratch
+    │   ├── graphs/
+    │   │   └── 1.py                       ← Adjacency matrix & adjacency list
+    │   └── inner function/
+    │       └── inner.py                   ← Closures and the nonlocal keyword
+    │
+    └── Professional Projects/             ← Applied, project-scale exercises
+        ├── 0.hello world.py
+        ├── 1. caesar_clipher.py           ← Encryption with str.maketrans
+        ├── 2. rpg character.py            ← Input validation & formatted output
+        ├── 3. pin extractor.py            ← Text parsing & nested iteration
+        ├── 4. numbet pattern generator.py
+        ├── 5. medical data validation.py  ← Regex + dict validation pipeline
+        ├── 6.user configuration manager.py
+        ├── 7. isbn validator.py           ← ISBN-10 & ISBN-13 checksum algorithms
+        ├── 8.musical instriment inventory.py
+        ├── 9.planet class.py
+        ├── 10. email simulator.py         ← Multi-class OOP + datetime
+        ├── 11. budget app.py              ← Ledger system + ASCII chart
+        ├── 12. salary tracker.py          ← @property + business rule enforcement
+        ├── 13. game character.py          ← Value clamping with property setters
+        ├── 14. media catalogue app.py     ← Inheritance + custom exceptions
+        ├── 15. discount calculator.py     ← Strategy design pattern + ABC
+        ├── 16. Player interface.py        ← Abstract base class + random movement
+        ├── 17.polygon area calculator.py  ← Geometric class hierarchy
+        ├── 18. linked list.py             ← Singly linked list from scratch
+        ├── 19. hash table.py              ← Custom hash function + collision chaining
+        ├── 20. binary search.py           ← O(log n) search with path tracking
+        ├── 21. bisection method.py        ← Numerical square root approximation
+        ├── 22. merge sort.py              ← Divide-and-conquer O(n log n) sort
+        ├── 23. quick sort.py              ← Pivot-based recursive sort
+        ├── 24. selection sort.py          ← In-place O(n²) sort
+        ├── 25. Luhn algorithm.py          ← Credit card checksum validation
+        └── 25. tower of hanoi.py          ← Recursive puzzle solver
+```
+
+---
+
+## 📊 Algorithms Implemented
+
+| Algorithm | Category | Time Complexity | File |
+|---|---|---|---|
+| Binary Search | Search | O(log n) | `20. binary search.py` |
+| Merge Sort | Sorting | O(n log n) | `22. merge sort.py` |
+| Quick Sort | Sorting | O(n log n) avg / O(n²) worst | `23. quick sort.py` |
+| Selection Sort | Sorting | O(n²) | `24. selection sort.py` |
+| Bisection Method | Numerical | O(log n) | `21. bisection method.py` |
+| Tower of Hanoi | Recursion | O(2ⁿ) | `25. tower of hanoi.py` |
+| Luhn Algorithm | Validation | O(n) | `25. Luhn algorithm.py` |
+| ISBN-10 Checksum | Validation | O(n) | `7. isbn validator.py` |
+| ISBN-13 Checksum | Validation | O(n) | `7. isbn validator.py` |
+| Caesar Cipher | Cryptography | O(n) | `1. caesar_clipher.py` |
+
+---
+
 ## 🧠 Concepts Practiced
 
-- Python syntax and built-in functions
-- Data structures (lists, dictionaries, sets, custom structures)
-- Functions, closures, and modules
-- Object-oriented programming (classes, inheritance, encapsulation, polymorphism)
-- Abstract base classes and design patterns
-- File handling and string manipulation
-- Algorithms and computational thinking
-- Input validation and data integrity
-- Scripting and automation
-- Recursion and divide-and-conquer strategies
+**Foundations**
+- Python syntax, built-in types, and control flow
+- Functions, default arguments, and optional parameters
+- String manipulation, f-strings, and translation tables
+
+**Data Structures**
+- Lists, dictionaries, sets, and tuples
+- Singly linked list (custom implementation)
+- Hash table with collision chaining (custom implementation)
+- Graphs: adjacency matrix and adjacency list representations
+
+**Object-Oriented Programming**
+- Class definition, `__init__`, instance and class attributes
+- Dunder methods: `__str__`, `__repr__`
+- Inheritance and `super().__init__()`
+- Encapsulation with `@property` getters and setters
+- Polymorphism and method overriding
+- Abstract Base Classes (`ABC`) and `@abstractmethod`
+- Custom exception classes
+- Object composition
+
+**Design Patterns**
+- Strategy pattern (discount engine)
+- Template method (abstract player interface)
+- Decorator pattern (function wrapping)
+
+**Data Validation & Algorithms**
+- Regex validation with `re.fullmatch`
+- Checksum algorithms (Luhn, ISBN-10, ISBN-13)
+- Recursive divide-and-conquer
+- Numerical methods (bisection / interval halving)
+- Input type and range enforcement
+
+**Closures & Scoping**
+- Inner functions and closures
+- The `nonlocal` keyword
+- LEGB scope resolution
 
 ---
 
@@ -573,22 +694,21 @@ Solves the Tower of Hanoi puzzle recursively for n disks. Tracks the state of al
 ## 🛠 Technologies
 
 - Python 3
-- Git
-- GitHub
+- Git & GitHub
 - Standard library: `re`, `datetime`, `abc`, `typing`, `math`, `random`
 
 ---
 
 ## 🚀 Learning Outcome
 
-These projects represent a complete foundation for backend Python development. Working through data validation, OOP design, custom data structures, and algorithm implementation has built the precise skill set required for:
+This repository demonstrates practical Python engineering skills built through deliberate, project-based practice. The progression — from core syntax through OOP, custom data structures, design patterns, and algorithm implementation — directly maps to the competencies required for professional backend development.
 
-- **Django** — class-based views, model design, ORM patterns
-- **Django REST Framework** — serializer validation, viewsets, permission logic
-- **API design** — structured request/response handling, business logic separation
-- **Code quality** — clean architecture, single-responsibility functions, defensive programming
-
-The progression from simple scripts to abstract classes, design patterns, and custom data structures mirrors the complexity expected in production backend codebases.
+| Framework / Tool | How this repo prepares you |
+|---|---|
+| **Django** | Class-based design, model validation, ORM patterns, encapsulation |
+| **Django REST Framework** | Serializer validation logic, viewset patterns, permission enforcement |
+| **API Design** | Request validation, business rule separation, structured error handling |
+| **Code Quality** | Clean architecture, defensive programming, single-responsibility functions |
 
 ---
 
