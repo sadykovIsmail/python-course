@@ -1,20 +1,21 @@
 def binary_search(search_list, value):
-    path_to_target = []
+    path_to_target = []  # Records every midpoint examined (useful for tracing)
     low = 0
     high = len(search_list) - 1
-    
+
     while low <= high:
-        mid = (low + high) // 2
+        mid = (low + high) // 2  # Integer midpoint — avoids float index
 
         value_at_middle = search_list[mid]
         path_to_target.append(value_at_middle)
-        
+
         if value == value_at_middle:
             return path_to_target, f'Value found at index {mid}'
         elif value > value_at_middle:
-            low = mid + 1
+            low = mid + 1   # Target is in the right half — discard left
         else:
-            high = mid -1
+            high = mid - 1  # Target is in the left half — discard right
+
     return "Value not found"
 
 print(binary_search([1, 2, 3, 4, 5], 3))
